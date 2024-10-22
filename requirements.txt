@@ -1,4 +1,2 @@
 pymupdf
 PySide6
-win32com.client
-win32api
