@@ -36,6 +36,7 @@ Select Folder: Opens a dialog to choose a folder and populates the file list bas
 Add Files: Displays selected files in a list.
 Select Output Folder: Sets the output folder for processed files.
 Select Document: Chooses a PDF document for insertion operations.
+Progress Bar and Update: Progress Bar runs as well as text updates are shown to the user regarding the progress during action.
 
 <h2>PDF Operations</h2>
 
@@ -76,13 +77,12 @@ Steps:
 Function: Converts files between different formats.
 
 Supported Conversions:
-Doc/Docx to PDF: Converts Microsoft Word documents to PDF.
 Image to PDF: Converts images (JPG, PNG, JPEG) to PDF.
 PDF to Image: Converts each page of a PDF into an image file (JPG, JPEG, PNG).
 Steps:
-1.Add files to be converted using select_file or select_folder.
+1.Add files to be converted using select file or select folder.
 2.Choose the conversion type from convert_dropdown.
-3.Click convert_button to start the conversion.
+3.Click on 'Convert' to start the conversion.
 
 <h3>4. Text and Image Extraction</h3>
 Function: Extracts text or images from PDF files.
@@ -92,7 +92,7 @@ Image Extraction: Extracts all images from the PDFs and saves them as separate i
 Steps:
 1.Add PDFs to extract text or images from using select_file or select_folder.
 2.Select extraction type from extract_dropdown (Text or Images).
-3.Click extract_button to perform the extraction.
+3.Click 'Extract' to perform the extraction.
 
 <h3>5. PDF Merging</h3>
 Function: Merges multiple PDF files into a single document.
@@ -100,8 +100,8 @@ Function: Merges multiple PDF files into a single document.
 File Selection: Use select_file or select_folder to choose PDFs to be merged.
 Output: The merged PDF is saved in the selected output directory.
 Steps:
-1.Add PDFs to be merged.
-2.Click merge_button to start the merging process.
+1. Add PDFs to be merged.
+2. Click on 'Merge' to start the merging process.
 
 <h3>6. PDF Encryption</h3>
 Function: Encrypts PDF files with a password.
@@ -111,7 +111,7 @@ Output: Encrypted PDFs are saved in the selected output directory with a prefix 
 Steps:
 1.Set a password in the password_text field.
 2.Add PDFs to be encrypted.
-3.Click password_button to encrypt the PDFs.
+3.Click Encrypt to encrypt the PDFs.
 
 <h3>7. Watermarking</h3>
 Function: Adds a watermark text to each page of a PDF.
@@ -122,7 +122,21 @@ Steps:
 
 1.Enter the watermark text and choose its position.
 2.Select the PDF to watermark.
-3.Click watermark_button to apply the watermark.
+3.Click watermark button to apply the watermark.
+
+<h3>8. Page Deletion<h3>
+Function: Deletes a single page or a page range from a selected PDF
+
+1. Select the PDF
+2. Select the page range
+3. Click on the 'Remove' button
+
+<h3> 9. Resize<h3>
+Function: Changes the resolution of the pages of the PDF files in order to reduce file size
+
+1. Select the PDF
+2. Select the DPI
+3. Click on the 'Resize' button
 
 Error Handling and Validation
 

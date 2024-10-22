@@ -12,12 +12,12 @@ class LoadingScreen(QSplashScreen):
     def initUI(self):
         # Customize the loading screen appearance
         self.setWindowFlag(Qt.FramelessWindowHint)
-        self.setPixmap(QPixmap("bg.jpeg").scaled(450, 450, Qt.KeepAspectRatio))
-
+        self.setPixmap(QPixmap("bg.png").scaled(500,500, Qt.KeepAspectRatio))
+        
 def start_application():
-    from pdfwizard import PdfWizard 
+    from enigmapdf import EnigmaPdf 
 
-    mainWin = PdfWizard()
+    mainWin = EnigmaPdf()
     mainWin.show()
     loading_screen.finish(mainWin)
 
@@ -33,6 +33,6 @@ if __name__ == "__main__":
     loading_screen.show()
 
     # Set a timer to load the main window after 2 seconds
-    QTimer.singleShot(2000, start_application)
+    QTimer.singleShot(1000, start_application)
 
     sys.exit(app.exec())
