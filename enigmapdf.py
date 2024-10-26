@@ -266,13 +266,13 @@ class EnigmaPdf(QMainWindow, Ui_MainWindow):
                 new_pdf.insert_pdf(pdf, from_page=0, to_page=insert_position -1)
                 new_pdf.insert_pdf(document, from_page=0, to_page=len(document) - 1)
                 new_pdf.insert_pdf(pdf, from_page=insert_position, to_page=len(pdf) - 1)
-            elif self.Insert_options_dropdown.currentText() == "Signle Page":
+            elif self.Insert_options_dropdown.currentText() == "Single Page":
                 new_pdf.insert_pdf(pdf, from_page=0, to_page=insert_position -1)
-                new_pdf.insert_pdf(document, from_page=start -2, to_page=start -1)
+                new_pdf.insert_pdf(document, from_page=start -1, to_page=start -1)
                 new_pdf.insert_pdf(pdf, from_page=insert_position, to_page=len(pdf) - 1)
             else:
                 new_pdf.insert_pdf(pdf, from_page=0, to_page=insert_position -1)
-                new_pdf.insert_pdf(document, from_page=start -2, to_page=end -1)
+                new_pdf.insert_pdf(document, from_page=start -1, to_page=end -1)
                 new_pdf.insert_pdf(pdf, from_page=insert_position, to_page=len(pdf) - 1)
             
             output = os.path.join(self.selected_output_path, "inserted.pdf")
@@ -694,7 +694,6 @@ class EnigmaPdf(QMainWindow, Ui_MainWindow):
             self.convert_to_dropdown.addItems(['Image(.jpg)', 'Image(.jpeg)', 'Image(.png)'])
         else:
             self.convert_to_dropdown.addItems(['PDF'])
-
 
 
     def pdf2img(self, img_format):
